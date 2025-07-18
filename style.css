@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-size: contain;        /* shows the whole image */
+  background-color: #000;          /* fallback background */
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#bg-video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Fills screen completely, may crop */
+}
+
+
+.main-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.glass-card {
+  width: 300px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.glass-card img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.glass-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.glass-card p {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6); /* soft white */
+  z-index: 10;
+  pointer-events: none; /* ensures it doesn't block clicks */
+}
+
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .glass-card {
+    width: 80%;
+  }
+}
+
+/* Phones (480px and below) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .glass-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .glass-card img {
+    width: 60px;
+  }
+
+  .glass-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .glass-card p {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    font-size: 10px;
+    bottom: 5px;
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="pomodoro.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <video autoplay muted loop id="bg-video">
+    <source src="images/sakura-street.1920x1080.mp4" type="video/mp4">
+  </video>
+
+
+  <div class="pomodoro-container">
+    <div class="overlay"></div>
+    <div class="pomodoro-box">
+      <div class="modes">
+        <button class="mode-btn active" data-mode="pomodoro">pomodoro</button>
+        <button class="mode-btn" data-mode="short">short break</button>
+        <button class="mode-btn" data-mode="long">long break</button>
+      </div>
+      <div class="timer" id="timer">25:00</div>
+      <div class="controls">
+        <button id="start-pause">start</button>
+        <i class='bx bx-reset' id="reset"></i>
+        <i class='bx bx-cog'></i>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  &copy; 2025 Vaishnavi Nayak. All rights reserved.
+</footer>
+
+  <script src="pomodoro.js"></script>
+</body>
+</html>

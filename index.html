@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="video-container">
+    <video autoplay muted loop id="bg-video">
+      <source src="images/orange-train-at-sunset.3840x2160.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="main-container">
+    <h1>Student Productivity Hub</h1>
+
+    <div class="card-container">
+      <div class="glass-card" onclick="goTo('weather.html')">
+        <img src="images/cloud.png" alt="Weather" />
+        <h2>Weather Forecast</h2>
+        <p>Check the weather before your day begins.</p>
+      </div>
+
+      <div class="glass-card" onclick="goTo('pomodoro.html')">
+        <img src="images/timer.png" alt="Pomodoro" />
+        <h2>Pomodoro Timer</h2>
+        <p>Boost focus using timed work sessions.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  &copy; 2025 Vaishnavi Nayak. All rights reserved.
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
